@@ -7,6 +7,13 @@ function App() {
   const [question3, setQuestion3] = useState(true);
   const [question4, setQuestion4] = useState(true);
 
+  const mouseOver = (event) => {
+    event.target.style.color = "#a625f3"
+  }
+  const mouseOut = (event) => {
+    event.target.style.color = "hsl(292, 42%, 14%)"
+  }
+
   return (
     <>
       
@@ -30,7 +37,7 @@ function App() {
 
         <div className="faq">
           <div className="question" onClick={() => setQuestion1(!question1)}>
-            <h4>What is Frontend Mentor, and how will it help me?</h4>
+            <h4 onMouseEnter={mouseOver} onMouseLeave={mouseOut}>What is Frontend Mentor, and how will it help me?</h4>
             {question1 ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +81,7 @@ function App() {
 
         <div className="faq">
           <div className="question" onClick={() => setQuestion2(!question2)}>
-            <h4>Is Frontend Mentor free?</h4>
+            <h4 onMouseEnter={mouseOver} onMouseLeave={mouseOut}>Is Frontend Mentor free?</h4>
             {question2 ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +124,7 @@ function App() {
 
         <div className="faq">
           <div className="question" onClick={() => setQuestion3(!question3)}>
-            <h4>Can I use Frontend Mentor projects in my portfolio?</h4>
+            <h4 onMouseEnter={mouseOver} onMouseLeave={mouseOut}>Can I use Frontend Mentor projects in my portfolio?</h4>
             {question3 ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +167,7 @@ function App() {
 
         <div className="last">
           <div className="question" onClick={() => setQuestion4(!question4)}>
-            <h4>
+            <h4 onMouseEnter={mouseOver} onMouseLeave={mouseOut}>
               How can I get help if I'm stuck on a Frontend Mentor challenge?
             </h4>
             {question4 ? (

@@ -26,6 +26,7 @@
 .faq {
   margin: 0 2rem;
   border-bottom: 1px solid lightgrey;
+  cursor: pointer;
 }
 
 
@@ -34,6 +35,7 @@ p {
 }
 .last {
   margin: 0 2rem 2rem 2rem;
+  cursor: pointer;
 }
 
 .question {
